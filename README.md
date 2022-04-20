@@ -4,5 +4,6 @@ This repository contains my personal notes about Data Structures & Algorithms.
 
 ### Contents:
 
-1. [Algorithmic Complexity and Big O Notation](./theory/complexity.md)
-2. [Arrays](./theory/arrays.md)
+A list of [theoretical resources](./theory/resources.md) and my C++ implementations for:
+
+1. [Static Arrays](./code/arrays)

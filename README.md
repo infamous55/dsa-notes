@@ -8,3 +8,4 @@ A list of [theoretical resources](./theory/resources.md) and my C++ implementati
 
 1. [Static Arrays](./code/arrays)
 2. [Dynamic Arrays](./code/vectors)
+3. [Singly Linked Lists](./code/singly-linked-lists)

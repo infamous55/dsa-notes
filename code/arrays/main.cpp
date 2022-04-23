@@ -1,8 +1,8 @@
-#include <iostream>
 #include <cstdlib>
+#include <iostream>
 
-#include "array.h"
 #include "array.cpp"
+#include "array.h"
 
 int main() {
   Array<int> arr(10);

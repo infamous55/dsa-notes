@@ -1,8 +1,8 @@
-#include <iostream>
 #include <cstdlib>
+#include <iostream>
 
-#include "vector.h"
 #include "vector.cpp"
+#include "vector.h"
 
 int main() {
   Vector<int> v, v2;

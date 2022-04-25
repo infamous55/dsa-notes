@@ -1,4 +1,5 @@
 #include <stdexcept>
+#include <iostream>
 
 #include "linked-list.h"
 
@@ -75,34 +76,6 @@ template <typename T> T &LinkedList<T>::at(int index) const {
   throw std::out_of_range("List index is out of range");
 }
 
-template <typename T>
-bool LinkedList<T>::operator==(const LinkedList<T> &other) const {
-  if (this->size != other.size)
-    return false;
-  Node *current_node = this->head, other_current_node = other.head;
-  while (current_node) {
-    if (current_node != other_current_node)
-      return false;
-    current_node = current_node->next;
-    other_current_node = other_current_node.next;
-  }
-  return true;
-}
-
-template <typename T>
-bool LinkedList<T>::operator!=(const LinkedList<T> &other) const {
-  if (this->size != other.size)
-    return true;
-  Node *current_node = this->head, other_current_node = other.head;
-  while (current_node) {
-    if (current_node == other_current_node)
-      return false;
-    current_node = current_node->next;
-    other_current_node = other_current_node.next;
-  }
-  return true;
-}
-
 template <typename T> void LinkedList<T>::push_front(const T &data) {
   Node *new_node = new Node();
   new_node->data = data;
@@ -153,8 +126,109 @@ template <typename T> void LinkedList<T>::pop_back() {
   this->size--;
 }
 
+template <typename T> void LinkedList<T>::insert_at(int index, const T &data) {
+  if (index < 0 || index > size)
+    throw std::out_of_range("List index is out of range");
+  if (index == 0) {
+    push_front(data);
+  } else if (index == size) {
+    push_back(data);
+  } else {
+    Node *new_node = new Node();
+    new_node->data = data;
+    int current_index = 0;
+    Node *current_node = this->head;
+    while (current_node) {
+      if (current_index == index - 1) {
+        new_node->next = current_node->next;
+        current_node->next = new_node;
+        this->size++;
+        return;
+      }
+      current_node = current_node->next;
+      current_index++;
+    }
+  }
+}
+
+template <typename T> void LinkedList<T>::delete_at(int index) {
+  if (index < 0 || index >= size)
+    throw std::out_of_range("List index is out of range");
+  if (index == 0) {
+    pop_front();
+  } else if (index == size - 1) {
+    pop_back();
+  } else {
+    int current_index = 0;
+    Node *current_node = this->head;
+    while (current_node) {
+      if (current_index == index - 1) {
+        Node* next_node = current_node->next->next;
+        delete current_node->next;
+        current_node->next = next_node;
+        this->size--;
+        return;
+      }
+      current_node = current_node->next;
+      current_index++;
+    }
+  }
+}
+
+template <typename T> void LinkedList<T>::reverse() {
+  if (this->size == 0)
+    return;
+  Node *current_node = this->head;
+  Node *next_node;
+  Node *prev_node = nullptr;
+  while (current_node) {
+    next_node = current_node->next;
+    current_node->next = prev_node;
+    prev_node = current_node;
+    current_node = next_node;
+  }
+  this->head = prev_node;
+}
+
+template <typename T> void LinkedList<T>::print() const {
+  Node *current_node = this->head;
+  while (current_node) {
+    std::cout << current_node->data << ' ';
+    current_node = current_node->next;
+  }
+  std::cout << std::endl;
+}
+
 template <typename T> bool LinkedList<T>::empty() const {
   return this->size == 0;
 }
 
 template <typename T> int LinkedList<T>::length() const { return this->size; }
+
+template <typename T>
+bool LinkedList<T>::operator==(const LinkedList<T> &other) const {
+  if (this->size != other.size)
+    return false;
+  Node *current_node = this->head, other_current_node = other.head;
+  while (current_node) {
+    if (current_node != other_current_node)
+      return false;
+    current_node = current_node->next;
+    other_current_node = other_current_node.next;
+  }
+  return true;
+}
+
+template <typename T>
+bool LinkedList<T>::operator!=(const LinkedList<T> &other) const {
+  if (this->size != other.size)
+    return true;
+  Node *current_node = this->head, other_current_node = other.head;
+  while (current_node) {
+    if (current_node == other_current_node)
+      return false;
+    current_node = current_node->next;
+    other_current_node = other_current_node.next;
+  }
+  return true;
+}

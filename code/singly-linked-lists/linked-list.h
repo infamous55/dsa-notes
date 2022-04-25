@@ -21,6 +21,12 @@ public:
   void push_back(const T &data); // add to back
   void pop_back();               // remove from back
 
+  void insert_at(int index, const T &data); // insert at index
+  void delete_at(int index);          // delete at index
+
+  void reverse();     // reverse the list
+  void print() const; // print the list
+
   bool empty() const; // returns true if the list is empty
   int length() const; // returns the size of the list
 

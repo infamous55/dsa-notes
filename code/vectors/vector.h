@@ -13,12 +13,11 @@ public:
   const T &operator[](int index) const; // index operator
 
   int at(int index) const; // returns the value at the given index
-
   void set(int index, T value);       // sets the value at the given index
-  void insert_at(int index, T value); // inserts the value at the given index,
-                                      // shifts all other values to the right
 
+  void insert_at(int index, T value); // inserts the value at the given index
   void delete_at(int index); // removes the value at the given index
+
   void remove(T value);      // removes the value from the array
   void clear();              // removes all values from the array
 

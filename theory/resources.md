@@ -14,3 +14,19 @@
 - [Arrays - Coursera](https://www.coursera.org/lecture/data-structures/arrays-OsBSF)
 - [Dynamic Arrays - Coursers](https://www.coursera.org/lecture/data-structures/dynamic-arrays-EwbnV)
 - [An Overview of Arrays and Memory - CS Dojo](https://www.youtube.com/watch?v=pmN9ExDf3yQ)
+
+## Linked Lists
+
+- [Singly Linked Lists - Coursera](https://www.coursera.org/lecture/data-structures/singly-linked-lists-kHhgK)
+- [Data Structures: Linked Lists - HackerRank](https://www.youtube.com/watch?v=njTh_OwMljA)
+- [Introduction to Linked Lists - Paul Programming](https://www.youtube.com/watch?v=o5wJkJJpKtM)
+- [Linked Lists in C++ Playlist - CodeWhoop](https://www.youtube.com/playlist?list=PLZgR0futJAU3fCGJn2UvRWbkLqmEje_cd)
+
+## Stacks and Queues
+
+- [Data Structures: Stacks and Queues - HackerRank](https://www.youtube.com/watch?v=wjI1WNcIntg)
+- [Stacks and Queues - Derenk Banas](https://www.youtube.com/watch?v=JvGZh_BdF-8)
+- [Stacks in C++ Playlist - CodeWhoop](https://www.youtube.com/playlist?list=PLZgR0futJAU384S3-2UBlW1ULv6ksPbB7)
+- [Queues in C++ Playlist - CodeWhoop](https://www.youtube.com/playlist?list=PLZgR0futJAU2Vcg8a0wb5je85iQ_XfYqB)
+- [Stacks - Coursera](https://www.coursera.org/lecture/data-structures/stacks-UdKzQ)
+- [Queues - Coursera](https://www.coursera.org/lecture/data-structures/queues-EShpq)

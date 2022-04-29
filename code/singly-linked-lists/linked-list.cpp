@@ -1,5 +1,5 @@
-#include <stdexcept>
 #include <iostream>
+#include <stdexcept>
 
 #include "linked-list.h"
 
@@ -163,7 +163,7 @@ template <typename T> void LinkedList<T>::delete_at(int index) {
     Node *current_node = this->head;
     while (current_node) {
       if (current_index == index - 1) {
-        Node* next_node = current_node->next->next;
+        Node *next_node = current_node->next->next;
         delete current_node->next;
         current_node->next = next_node;
         this->size--;

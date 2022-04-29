@@ -1,9 +1,0 @@
-{
-  "files.associations": {
-    "stdexcept": "cpp",
-    "*.tcc": "cpp",
-    "deque": "cpp",
-    "string": "cpp",
-    "vector": "cpp"
-  }
-}
